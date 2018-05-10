@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
-	var config = grunt.file.readJSON('config.json');
+	var param = grunt.option('config');
+	var config = grunt.file.readJSON(param);
 	/*config.buildFolder = grunt.option('build');
 	config.appName = grunt.option('app');
 	config.pageOneName = grunt.option('page1');
