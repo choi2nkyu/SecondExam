@@ -18,5 +18,8 @@
   "homepage": "https://github.com/choi2nkyu/SecondExam#readme",
   "dependencies": {
     "grunt": "^1.0.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-jasmine": "^1.2.0"
   }
 }

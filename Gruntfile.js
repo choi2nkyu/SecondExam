@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 	});
 
 	var param = grunt.option('config');
-	var config = grunt.readJSOn(param);
+	var config = grunt.file.readJSON(param);
 
 	grunt.registerTask('copyIndex', function(){
 		grunt.file.copy('index.html', config.buildFolder + '/index.html', {
