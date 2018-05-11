@@ -1,10 +1,19 @@
 module.exports = function(grunt) {
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
+
+	grunt.initConfig({
+	  jasmine: {
+	    JS: {
+	      src: 'js/*.js',
+	      options: {
+	        specs: 'spec/*.spec.js'
+	      }
+	    }
+	  }
+	});
+
 	var param = grunt.option('config');
-	var config = grunt.file.readJSON(param);
-	/*config.buildFolder = grunt.option('build');
-	config.appName = grunt.option('app');
-	config.pageOneName = grunt.option('page1');
-	config.pageTwoName = grunt.option('page2');*/
+	var config = grunt.readJSOn(param);
 
 	grunt.registerTask('copyIndex', function(){
 		grunt.file.copy('index.html', config.buildFolder + '/index.html', {
